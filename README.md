@@ -1,15 +1,29 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This repo is the codes for a [FHL project](https://hackbox.microsoft.com/hackathons/hackathon2023/project/29624). In the project, we will implement a distributed task system.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Requirements
+- VS2022
+- Docker desktop
+- dotnet 6+
+- Kafka Management [tool](https://www.kafkatool.com/download.html)
 
+# Setup
+## Database
+- run `setup-db.ps1`
+- Replace the `*` with the real password in the appsettings.json (`Please don't commit the pwd to the remote`)
+- Open the `Packge Manage Console` in the VS2022(Tools => Nuget Package Manage => Packge Manage Console) and run `Update-Databse`
+## Kafka
+- run `Setup-kafka.ps1`
+- Open Kafka Management tool(Offset Explorer)
+    - Cluster => Add New Connection
+    -  switch the Properties
+        - Cluster Name(defined by yourself)
+        - ZoopKeeper Port => 22181
+    - switch the Advanced
+        - Bootstrap servers => localhost:29092
+    - Connect to the cluster
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Build
 
 # Contribute
 TODO: Explain how other users and developers can contribute to make your code better. 
