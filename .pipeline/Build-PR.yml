@@ -19,7 +19,7 @@ steps:
     command: 'restore'
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
-  displayName: 'dotnet build $(buildConfiguration)'
+  displayName: 'dotnet restore $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
   continueOnError: true
@@ -35,3 +35,4 @@ steps:
     command: test
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
+  displayName: 'dotnet test $(buildConfiguration)'
