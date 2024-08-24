@@ -1,5 +1,5 @@
 # Introduction 
-This repo is the codes for a [FHL project](https://hackbox.microsoft.com/hackathons/hackathon2023/project/29624). In the project, we will implement a distributed task system.
+This repo is the codes for a toy job management system. In the project, we will implement a distributed task system.
 
 # Requirements
 - VS2022
